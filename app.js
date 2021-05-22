@@ -7,20 +7,20 @@ app.get('/index.html', function handleHomePage(request, response){
 });
 
 app.get('/process_get', function handleProcessGet(request, response){
-    let guess = request.query.number;
-    var status = true;
+    let number = request.query.number;
+    var primeStatus = true;
     for(var i = 2; i <number/2; i++){
         if (number % i === 0 ){
-            status = false;
+            primeStatus = false;
         }
     }
     let retval = "";
 
-    if (status) {
-        retval = "Number: " + guess + "  is prime"
+    if (primeStatus) {
+        retval = "Number: " + number + "This number is prime"
     }
     else {
-        retval = "Number: " + guess + "  is not prime"
+        retval = "Number: " + number + "This number is not prime"
     }
 
     response.send(retval)
