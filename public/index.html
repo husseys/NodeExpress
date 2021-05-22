@@ -14,10 +14,10 @@
             let numberValue = numberInput.value;
 
             if (numberValue >= 2) {
-                document.getElementById("plus").innerHTML = "&#x2713";
+                document.getElementById("symbol").innerHTML = "&#x2713";
             }
             else{
-                document.getElementById("plus").innerHTML = "&#10060";
+                document.getElementById("symbol").innerHTML = "&#10060";
             }
         }
     </script>
@@ -27,13 +27,13 @@
 <body>
 
 
-<h1><center>I s  I t  P r i m e  N u m b e r  o r  N o t</center></h1>
+<h1><center>Is  It  Prime  Number  Or  Not</center></h1>
 <div class="container">
     <form action="process_get" method="GET">
         <div class="form-group">
-            <label for="number">Enter a number:</label>
+            <label for="number">Please enter a number:</label>
             <input type="number" class="form-control" id="number" name="number" min="2" oninput="validation()">
-            <span id="plus"></span>
+            <span id="symbol"></span>
         </div>
         <div class="form-group">
             <input type="submit" value="Submit">
