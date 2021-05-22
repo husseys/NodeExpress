@@ -17,10 +17,10 @@ app.get('/process_get', function handleProcessGet(request, response){
     let retval = "";
 
     if (status) {
-        retval = "Number: " + number + " IS PRIME"
+        retval = "Number: " + number + "  IS PRIME"
     }
     else {
-        retval = "Number: " + number + " IS NOT PRIME"
+        retval = "Number: " + number + "  IS NOT PRIME"
     }
 
     response.send(retval)
