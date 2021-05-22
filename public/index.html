@@ -7,32 +7,32 @@
     <meta name="author" content="Carlos Arias from Getbootstrap.com">
     <title>Express Form Example</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script>
+        function checkValidNumber(){
+            let numberInput = document.getElementById("number");
+
+            let numberValue = numberInput.value;
+
+            if (numberValue >= 2) {
+                document.getElementById("plus").innerHTML = "+";
+            }
+            else{
+                document.getElementById("plus").innerHTML = "-";
+            }
+        }
+    </script>
 
 </head>
 
 <body>
 
-<script>
-    function validate(){
-        let numberInput = document.getElementById("number");
-
-        let numberValue = numberInput.value;
-
-        if (numberValue >= 2) {
-            document.getElementById("plus").innerHTML = "+";
-        }
-        else{
-            document.getElementById("plus").innerHTML = "-";
-        }
-    }
-</script>
 
 <h1>Is it Prime or Not</h1>
 <div class="container">
     <form action="process_get" method="GET">
         <div class="form-group">
             <label for="number">Enter a number:</label>
-            <input type="number" class="form-control" id="number" name="number" min="2" oninput="validate()">
+            <input type="number" class="form-control" id="number" name="number" min="2" oninput="checkValidNumber()">
             <span id="plus"></span>
         </div>
         <div class="form-group">
