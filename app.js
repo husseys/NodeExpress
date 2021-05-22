@@ -14,16 +14,16 @@ app.get('/process_get', function handleProcessGet(request, response){
             primeStatus = false;
         }
     }
-    let retval = "";
+    let return = "";
 
     if (primeStatus) {
-        retval = "Number: " + number + "This number is prime"
+        return = "Number: " + number + " IS PRIME"
     }
     else {
-        retval = "Number: " + number + "This number is not prime"
+        return = "Number: " + number + " IS NOT PRIME"
     }
 
-    response.send(retval)
+    response.send(return)
 
 });
 
