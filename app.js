@@ -8,10 +8,10 @@ app.get('/index.html', function handleHomePage(request, response){
 
 app.get('/process_get', function handleProcessGet(request, response){
     let number = request.query.number;
-    var primeStatus = false;
+    var primeStatus = true;
     for(var i = 2; i <number/2; i++){
         if (number % i === 0 ){
-            primeStatus = true;
+            primeStatus = false;
         }
     }
     let retval = "";
