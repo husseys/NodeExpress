@@ -2,9 +2,9 @@
   "name": "nodeexpress",
   "version": "1.0.0",
   "description": "",
-  "main": "./bin/www",
+  "main": ".NodeExpress.js",
   "scripts": {
-    "start": "node ./bin/www",
+    "start": "node NodeExpress.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
